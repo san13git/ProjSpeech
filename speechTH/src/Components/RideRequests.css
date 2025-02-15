@@ -1,0 +1,40 @@
+/* .ride-requests {
+    padding: 20px;
+  }
+  
+  .ride-requests h2 {
+    margin-bottom: 20px;
+  }
+  
+  .ride-requests ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .ride-requests li {
+    margin-bottom: 10px;
+  }
+  
+  .ride-requests p {
+    margin: 0;
+  }
+   */
+
+   .therapists-list {
+    margin-top: 20px;
+    padding: 10px;
+  }
+  
+  .therapist-card {
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+  }
+  
+  .therapists-list h3 {
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
