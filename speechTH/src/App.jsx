@@ -1,35 +1,86 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+
+// import './App.css';
+// import Navbar from './Components/Navbar'
+// import FullWidth from './Components/FullWidth'
+// import { Route, Routes, BrowserRouter } from 'react-router-dom';
+// import Home from './Components/Home'
+// import Login from './Components/Login'
+
+
+
+// function App() {
+//   return (
+//     <BrowserRouter>
+    
+//     {/* <div className="App"> */}
+//     <Navbar />
+      
+      
+        
+        
+//         <FullWidth/>
+//         <Home/>
+//         <Routes>
+          
+//           <Route path="/login" element={<Login />} />
+//           {/* Add more routes as needed */}
+//         </Routes>
+        
+      
+        
+//     {/* </div> */}
+//     </BrowserRouter>
+    
+//   );
+// }
+
+// export default App;
+
+import './App.css';
+import Navbar from './Components/navbar/navbar'
+
+import { Route, Routes, BrowserRouter } from 'react-router-dom';
+
+import About from './Components/about/about'
+import LetsWork from './Components/letswork/LetsWork'
+import Services from './Components/ourservices/Services'
+import Contact from './Components/contactus/Contact'
+import Login from './Components/Login'
+import Search from './Components/Search'
+import PublishRide from './Components/PublishRide';
+import SignUp from './Components/SignUp';
+import LandingPage from './Components/pages/LandingPage'
+// import PublishRide from './Components/PublishRide.js'
+import RideConfirmation from './Components/RidePublishConfirm'
+import RideConfirmationUser from './Components/rideconfirmuser';
+import RideRequests from './Components/RideRequests';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <BrowserRouter>
+      <div className="App">
+        {/* <Navbar /> */}
+        
+        
+       
+        <Routes>
+          
+          <Route path="/" element={<LandingPage/>} />
+          
+          <Route path="/contactus" element={<Contact/>} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/search" element={<Search/>} />
+          <Route path="/publish" element ={<PublishRide/>}/>
+          <Route path="/signup" element={<SignUp/>}/>
+          <Route path="/ride-confirmation" element={<RideConfirmation />} />
+          <Route path="/ride-hai" element={<RideConfirmationUser/>}/>
+          <Route path="/ride-requests" element={<RideRequests/>}/>
+          
+        </Routes>
+        
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;
